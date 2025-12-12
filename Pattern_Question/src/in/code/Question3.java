@@ -1,0 +1,29 @@
+package in.code;
+
+import java.util.Scanner;
+
+public class Question3 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Input the starting number (a) of the A.P. series:");
+		int a = sc.nextInt();
+		System.out.println("Input the number of items (n) for the A.P. series:");
+		int n = sc.nextInt();
+		System.out.println("Input the common difference (d) of A.P. series:");
+		int d = sc.nextInt();
+		int sum = 0;
+		System.out.print("The Sum of the A.P. series are : ");
+
+		for (int i = 0; i < n; i++) {
+			int term = a + (i * d);
+			sum += term;
+			System.out.print(term);
+			if (i < n - 1) {
+				System.out.print(" + ");
+			}
+		}
+		System.out.println(" = " + sum);
+
+	}
+
+}

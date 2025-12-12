@@ -1,0 +1,7 @@
+package in.demo;
+
+import java.util.Comparator;
+
+public class TreeDemo implements Comparator<String> {
+
+}

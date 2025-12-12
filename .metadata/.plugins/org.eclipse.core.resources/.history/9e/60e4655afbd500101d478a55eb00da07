@@ -1,0 +1,24 @@
+package in.sunny;
+
+public class CountCharFrequency {
+	public static void main(String[] args) {
+		String s1 ="hello World";
+		
+		count(s1);
+	}
+	public static void count(String s) {
+		int count =0;
+		char[] ch = s.toCharArray();
+		for(int i =0;i<ch.length;i++) {
+			for(int j =0;j<ch.length;j++) {
+				if(ch[i]==ch[j]) {
+					count++;
+				}
+			}
+			System.out.println(ch[i] +" = " + count );
+			count =0;
+		}
+		
+	}
+
+}

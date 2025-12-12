@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;in.loop.GeteachNumber&apos; to &apos;GetEachNumber&apos;&#x0D;&#x0A;- Original project: &apos;ClassRoom_Question&apos;&#x0D;&#x0A;- Original element: &apos;in.loop.GeteachNumber&apos;&#x0D;&#x0A;- Renamed element: &apos;in.loop.GetEachNumber&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;GeteachNumber&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;in.loop{GeteachNumber.java[GeteachNumber" matchStrategy="1" name="GetEachNumber" qualified="false" references="true" similarDeclarations="false" stamp="1758509550519" textual="false" version="1.0"/>
+</session>

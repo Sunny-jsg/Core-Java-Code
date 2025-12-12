@@ -1,0 +1,240 @@
+✅ 1) What is a package and why do we need packages?
+
+A package in Java is a folder-like structure used to group related classes and interfaces.
+
+Why we need packages
+
+To avoid name conflicts (e.g., two classes with same name in different packages)
+
+To organize code (like folders in a project)
+
+To provide access protection
+
+For modular development (easy to maintain large projects)
+
+✅ 2) What is Import in Java?
+
+import is a keyword used to access a class from another package.
+
+Example:
+
+import java.util.Scanner;
+
+
+Without import, you would need to write:
+
+java.util.Scanner sc = new java.util.Scanner(System.in);
+
+✅ 3) What is static import?
+
+Static import allows you to access static members (variables/methods) of a class without using class name.
+
+Example:
+
+import static java.lang.Math.*;
+System.out.println(sqrt(25));  // no need Math.sqrt()
+
+✅ 4) What is a Wrapper Class?
+
+Wrapper classes convert primitive types → objects.
+
+Examples:
+
+Primitive	Wrapper
+int	Integer
+double	Double
+boolean	Boolean
+char	Character
+✅ 5) When we have primitives, why use wrapper classes?
+
+We need wrapper classes because:
+
+Collections (ArrayList, HashMap) cannot store primitives
+
+Useful for type conversion (e.g., String → Integer)
+
+Required for serialization
+
+Required for reflection
+
+Support utility methods (Integer.parseInt(), etc.)
+
+✅ 6) What is Auto Boxing and Auto Unboxing?
+
+Auto-boxing: primitive → wrapper object
+
+Integer i = 10; // int → Integer
+
+
+Auto-unboxing: wrapper object → primitive
+
+int a = i; // Integer → int
+
+✅ 7) What is Exception Hierarchy in Java?
+Throwable
+   |
+   |-- Exception
+   |      |-- RuntimeException (Unchecked)
+   |      |-- Other Exceptions (Checked)
+   |
+   |-- Error (Not meant to handle)
+
+✅ 8) Checked vs Unchecked Exceptions
+Checked Exceptions
+
+Checked at compile time
+
+Must be handled using try/catch or throws
+
+Examples: IOException, SQLException, ClassNotFoundException
+
+Unchecked Exceptions
+
+Occur at runtime
+
+No need to handle
+
+Examples: NullPointerException, ArithmeticException, ArrayIndexOutOfBoundsException
+
+✅ 9) How to handle exceptions?
+
+Three ways:
+
+try-catch
+
+throws
+
+try-with-resources
+
+✅ 10) What is try-catch-finally?
+try
+
+Contains risky code
+
+catch
+
+Handles the exception
+
+finally
+
+Executes always, used to close connections/resources
+
+Example:
+
+try {
+   int a = 10/0;
+} catch (ArithmeticException e) {
+   System.out.println("Error");
+} finally {
+   System.out.println("Always executes");
+}
+
+✅ 11) Difference between throws and throw
+throw	throws
+Used to throw exception manually	Used in method signature
+Occurs inside method body	Occurs at method declaration
+Throws only one exception at a time	Can declare multiple exceptions
+Example: throw new AgeException()	Example: public void m() throws IOException
+✅ 12) What is try-with-resources?
+
+Used to auto close resources like File, Scanner, Connection.
+Resource MUST implement AutoCloseable.
+
+Example:
+
+try (FileReader fr = new FileReader("abc.txt")) {
+    // automatic closing
+}
+
+✅ 13) Why write multiple catch blocks? Any alternative?
+Why multiple catch?
+
+To handle different exceptions separately.
+
+Alternative
+
+Use multi-catch:
+
+catch(IOException | SQLException e)
+
+✅ 14) How to create and throw User Defined Exception?
+Step 1: Create class
+class AgeInvalidException extends Exception {
+    public AgeInvalidException(String msg) {
+        super(msg);
+    }
+}
+
+Step 2: Throw manually
+if(age < 18)
+    throw new AgeInvalidException("Age must be 18+");
+
+✅ 15) JVM behavior when Runtime Exception occurs
+
+If runtime exception is not handled:
+
+JVM stops program execution
+
+JVM prints:
+
+Exception name
+
+Cause/message
+
+Stack trace (error location)
+
+✅ 16) What is Exception Re-throw?
+
+Throwing an exception again after catching it.
+
+Example:
+
+try {
+   // code
+} catch(Exception e) {
+   throw e; // re-throwing
+}
+
+
+Used when a method wants to log exception but let the caller handle it.
+
+✅ 17) Few Checked Exceptions
+
+IOException
+
+SQLException
+
+ClassNotFoundException
+
+FileNotFoundException
+
+InterruptedException
+
+✅ 18) Few Unchecked Exceptions
+
+NullPointerException
+
+ArithmeticException
+
+NumberFormatException
+
+ArrayIndexOutOfBoundsException
+
+ClassCastException
+
+✅ 19) Program that gives StackOverflowError
+Example (infinite recursion)
+public class Test {
+    public static void m() {
+        m();  // calling itself repeatedly
+    }
+    public static void main(String[] args) {
+        m();
+    }
+}
+
+✅ 20) Difference between final, finally, finalize()
+Keyword	Meaning
+final	Used with variable/method/class (constant, non-overridable, non-inheritable)
+finally	Block executed always after try/catch
+finalize()	Method used by Garbage Collector before destroying object (deprecated)

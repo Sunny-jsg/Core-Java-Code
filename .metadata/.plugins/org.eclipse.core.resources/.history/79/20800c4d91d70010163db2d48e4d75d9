@@ -1,0 +1,40 @@
+package in.sunny;
+
+public class Sum {
+	public static void main(String[] args) {
+		String s1 = "Sunny123";
+		int ans = sum(s1);
+		System.out.println("Sum of Digit " +ans);
+		
+
+	}
+
+	public static int sum(String s1) {
+		int sumdigit = 0;
+		char[] ch = s1.toCharArray();
+		for (char c : ch) {
+			if (c > '0' && c < '9') {
+				int n = c - '0';
+				sumdigit = sumdigit + n;
+			}
+		}
+		return sumdigit;
+	}
+
+	public static void separate(String s) {
+		String letters = "";
+		String numbers = "";
+
+		for (char c : s.toCharArray()) {
+			if (c >= '0' && c <= '9') {
+				numbers += c;
+			} else {
+				letters += c;
+			}
+		}
+
+		System.out.println("Letters: " + letters);
+		System.out.println("Numbers: " + numbers);
+	}
+
+}

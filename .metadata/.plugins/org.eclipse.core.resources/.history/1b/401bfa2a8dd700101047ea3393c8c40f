@@ -1,0 +1,20 @@
+package in.demo;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class ArrayListDemo {
+	public static void main(String[] args) {
+		ArrayList<String> al = new ArrayList<>();
+		al.add("mohan");
+		al.add("sita");
+		al.add("radha");
+		al.add("gita");
+		al.add("ram");
+		Collections.sort(al,new DemoComparator<String>());
+		System.out.println(al);
+	}
+
+	
+
+}

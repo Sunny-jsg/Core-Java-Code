@@ -1,0 +1,36 @@
+package in.method.jsp;
+
+public class Encoding {
+	public static void main(String[] args) {
+		System.out.println(encode("java", 6));
+		System.out.println(decode("pgbg", 6));
+	}
+	static String encode(String s ,int level) {
+		char[] alpha = "abcdefghijklmnopqrstuvwxyz".toCharArray();
+		String s1 ="";
+		char[] a = s.toCharArray();
+		for(int i=0;i<a.length;i++) {
+			int index =a[i]-'a';
+			index+=level;
+			index =index%26;
+			s1 +=alpha[index];
+		}
+		return s1;
+	}
+	static String decode(String s,int level) {
+		char[] alpha = "abcdefghijklmnopqrstuvwxyz".toCharArray();
+		String s2 ="";
+		char[] c = s.toCharArray();
+		for(int i =0;i<c.length;i++) {
+			int index =c[i]-'a';
+			index -=level;
+			if (index < 0) {
+                index += 26;   
+            }
+			index =index%26;
+			s2 +=alpha[index];
+		}
+		return s2;
+	}
+
+}

@@ -1,0 +1,22 @@
+package in.ramana;
+
+public class Q18 {
+	public static void main(String[] args) {
+		int[] arr = { 0, 2, 3, 2, 4, 1 };
+		int max = arr[0];
+		int secondMax = arr[0];
+		for (int i = 0; i <= arr.length - 1; i++) {
+			if (max < arr[i]) {
+				secondMax = max;
+				max = arr[i];
+			} else if (arr[i] > secondMax && arr[i] != max) {
+				secondMax = arr[i];
+			}
+
+		}
+		System.out.println("Max = " + max);
+        System.out.println("Second Max = " + secondMax);
+
+	}
+
+}

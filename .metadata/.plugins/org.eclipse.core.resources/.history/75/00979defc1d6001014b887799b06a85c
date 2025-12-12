@@ -1,0 +1,30 @@
+package in.sunny;
+
+import java.util.Arrays;
+
+public class MergeTwoArray {
+	public static void main(String[] args) {
+		int[] arr1 = { 1, 2, 4, 7, 8 };
+		int[] arr2 = { 3, 6, 9, 10, 12 };
+		int[] arr3 = new int[arr1.length + arr2.length];
+		int[] arr4 = new int[6];
+		int value =0;
+		int index = 0;
+		for (int a : arr1) {
+			arr3[index] = a;
+			index++;
+		}
+		for (int b : arr2) {
+			arr3[index] = b;
+			index++;
+		}
+		for (int c : arr3) {
+			if (c % 2 == 0) {
+				arr4[value] = arr3[c];
+				value++;
+			}
+		}
+		System.out.println(Arrays.toString(arr4));
+	}
+
+}

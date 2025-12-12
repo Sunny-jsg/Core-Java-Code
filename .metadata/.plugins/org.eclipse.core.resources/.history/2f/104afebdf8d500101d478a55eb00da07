@@ -1,0 +1,24 @@
+package in.sunny;
+
+import java.util.Arrays;
+
+public class Anagram {
+	public static void main(String[] args) {
+		String s1 ="listen";
+		String s2 ="slient";
+		boolean anagram = isAnagram(s1, s2);
+		System.out.println(anagram);
+		
+	}
+	public static boolean isAnagram(String s1,String s2) {
+		char[] ch1 = s1.toCharArray();
+		char[] ch2 = s2.toCharArray();
+		Arrays.sort(ch1);
+		Arrays.sort(ch2);
+		if(ch1.equals(ch2)) {
+			return true;
+		}
+		return false;
+	}
+
+}

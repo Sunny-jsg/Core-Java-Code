@@ -1,0 +1,15 @@
+package in.demo;
+
+import java.util.TreeSet;
+
+public class TreeesetDemo {
+	public static void main(String[] args) {
+		TreeSet<String> ts = new TreeSet<>();
+		ts.add("mohan");
+		ts.add("sita");
+		ts.add("radha");
+		ts.add("gita");
+		ts.add("ram");
+	}
+
+}
