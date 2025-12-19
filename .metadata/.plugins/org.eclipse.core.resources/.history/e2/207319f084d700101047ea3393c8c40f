@@ -1,7 +1,0 @@
-package in.demo;
-
-import java.util.Comparator;
-
-public class DemoComparator implements Comparator<T> {
-
-}

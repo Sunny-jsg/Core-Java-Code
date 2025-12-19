@@ -1,5 +1,0 @@
-package in.demo;
-
-public class ArrayListComparable implements Comparable<String> {
-
-}

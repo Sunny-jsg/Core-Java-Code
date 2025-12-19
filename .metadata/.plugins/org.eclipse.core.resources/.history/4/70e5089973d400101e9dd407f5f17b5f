@@ -1,8 +1,0 @@
-package in.list;
-
-public class ArrayLis {
-	public static void main(String[] args) {
-		ArrayLis<E>
-	}
-
-}
