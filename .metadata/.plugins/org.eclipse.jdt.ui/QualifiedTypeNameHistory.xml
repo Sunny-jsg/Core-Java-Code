@@ -1,18 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.lang.Exception"/>
-    <fullyQualifiedTypeName name="in.ait.ToString_Demo"/>
-    <fullyQualifiedTypeName name="in.ait.Student"/>
-    <fullyQualifiedTypeName name="java.lang.Cloneable"/>
-    <fullyQualifiedTypeName name="in.ait.Circle"/>
-    <fullyQualifiedTypeName name="java.lang.Override"/>
-    <fullyQualifiedTypeName name="in.demo.Startable"/>
-    <fullyQualifiedTypeName name="in.demo.Payment"/>
     <fullyQualifiedTypeName name="in.demo.CreditCardPayment"/>
     <fullyQualifiedTypeName name="in.singleton.Singleton_Class"/>
     <fullyQualifiedTypeName name="in.singleton.MovieHall"/>
     <fullyQualifiedTypeName name="javax.management.openmbean.OpenMBeanAttributeInfo"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="in.method.jsp.Palindrome"/>
     <fullyQualifiedTypeName name="in.jspider.Circle"/>
     <fullyQualifiedTypeName name="int"/>
@@ -34,7 +25,6 @@
     <fullyQualifiedTypeName name="in.exception.InvalidPassword"/>
     <fullyQualifiedTypeName name="in.exception.InvalidEmail"/>
     <fullyQualifiedTypeName name="in.list.ArrayList"/>
-    <fullyQualifiedTypeName name="java.util.HashMap"/>
     <fullyQualifiedTypeName name="in.demo.Demo"/>
     <fullyQualifiedTypeName name="in.demo.Student"/>
     <fullyQualifiedTypeName name="in.demo.ArrayListDemo"/>
@@ -46,18 +36,28 @@
     <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="in.demo.TreeesetDemo"/>
     <fullyQualifiedTypeName name="in.demo.TreeDemo"/>
-    <fullyQualifiedTypeName name="java.lang.Math"/>
-    <fullyQualifiedTypeName name="java.util.Map"/>
-    <fullyQualifiedTypeName name="java.lang.Character"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="java.util.Set"/>
-    <fullyQualifiedTypeName name="java.util.HashSet"/>
     <fullyQualifiedTypeName name="java.util.LinkedHashMap"/>
     <fullyQualifiedTypeName name="java.util.LinkedHashSet"/>
     <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.Character"/>
+    <fullyQualifiedTypeName name="in.ll.DoublyLinkedList.Node"/>
+    <fullyQualifiedTypeName name="in.s.MyStack.Node"/>
+    <fullyQualifiedTypeName name="in.s.MyStack"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
     <fullyQualifiedTypeName name="in.method.MyArrayList"/>
-    <fullyQualifiedTypeName name="java.lang.Object"/>
+    <fullyQualifiedTypeName name="java.lang.IndexOutOfBoundsException"/>
+    <fullyQualifiedTypeName name="in.s.MyStackArrayList"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="in.stack.MyQueue"/>
+    <fullyQualifiedTypeName name="java.lang.Object"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.lang.FunctionalInterface"/>
+    <fullyQualifiedTypeName name="in.hs.MyHashSet"/>
+    <fullyQualifiedTypeName name="java.util.HashSet"/>
 </qualifiedTypeNameHistroy>

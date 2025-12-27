@@ -2,66 +2,80 @@ package in.method;
 
 import java.util.Arrays;
 
-public class MyArrayList<E> {
+public class MyArrayList {
+	private Object[] arr;
+	private int size = 0;
 
-    private Object[] arr;
-    private int size = 0;
+	public MyArrayList() {
+		arr = new Object[5];
+	}
 
-    // constructor
-    public MyArrayList() {
-        arr = new Object[5];
-    }
-    public MyArrayList(int initialsize) {
-    	arr =new Object[initialsize];
-    }
+	public MyArrayList(int intialSize) {
+		arr = new Object[intialSize];
+	}
 
-    // add element
-    public void add(E element) {
-        if (size == arr.length) {
-            grow();
-        }
-        arr[size++] = element;
-    }
+	public void grow() {
+		Object[] temp = new Object[arr.length + 3];
+		for (int i = 0; i < arr.length; i++) {
+			temp[i] = arr[i];
+		}
+		arr = temp;
+	}
 
-    // grow array
-    private void grow() {
-        Object[] temp = new Object[arr.length + 3];
-        for (int i = 0; i < arr.length; i++) {
-            temp[i] = arr[i];
-        }
-        arr = temp;
-    }
+	public void add(int value) {
+		if (size == arr.length) {
+			grow();
+		}
+		arr[size] = value;
+		size++;
+	}
 
-    // get element
-    @SuppressWarnings("unchecked")
-    public E get(int index) {
-        if (index < 0 || index >= size) {
-            throw new IndexOutOfBoundsException("Index: " + index);
-        }
-        return (E) arr[index];
-    }
+	public int get(int index) {
+		if (index < -1 || index >= size) {
+			throw new IndexOutOfBoundsException();
+		}
 
-    // remove element
-    public void remove(int index) {
-        if (index < 0 || index >= size) {
-            throw new IndexOutOfBoundsException("Index: " + index);
-        }
+		return (int) arr[index];
+	}
 
-        for (int i = index; i < size - 1; i++) {
-            arr[i] = arr[i + 1];
-        }
+	public void remove(int index) {
+		if (index < -1 || index >= size) {
+			throw new IndexOutOfBoundsException();
+		}
+		for (int i = index; i < size - 1; i++) {
+			arr[i] = arr[i + 1];
+		}
+		arr[size - 1] = null;
+		size--;
 
-        arr[size - 1] = null;
-        size--;
-    }
+	}
 
-    // size
-    public int size() {
-        return size;
-    }
+	public void add(int value, int index) {
+		if (index < -1 || index > size) {
+			throw new IndexOutOfBoundsException();
+		}
+		// grow array if full
+		if (size == arr.length) {
+			grow();
+		}
 
-    @Override
-    public String toString() {
-        return Arrays.toString(Arrays.copyOf(arr, size));
-    }
+		// shift elements to the right
+		for (int i = size; i > index; i--) {
+			arr[i] = arr[i - 1];
+		}
+
+		// insert element
+		arr[index] = value;
+		size++;
+	}
+
+	public int size() {
+		return size;
+	}
+
+	@Override
+	public String toString() {
+		return "" + Arrays.toString(arr);
+	}
+
 }

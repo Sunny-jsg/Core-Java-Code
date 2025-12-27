@@ -3,7 +3,7 @@ package in.method;
 public class TestMyArrayList {
     public static void main(String[] args) {
 
-        MyArrayList<Integer> al = new MyArrayList<>(10);
+        MyArrayList al = new MyArrayList(6);
 
         al.add(10);
         al.add(20);
