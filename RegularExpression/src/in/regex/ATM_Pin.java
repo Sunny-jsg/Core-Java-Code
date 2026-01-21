@@ -1,0 +1,29 @@
+package in.regex;
+
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class ATM_Pin {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		while (true) {
+		System.out.println("Enter Pin ::");
+		
+			String s = sc.nextLine();
+			Pattern p = Pattern.compile("[0-9]{4}");
+			Matcher m = p.matcher(s);
+			if (m.matches()) {
+				System.out.println("Valid PIN");
+			} else {
+				System.out.println("Invalid PIN");
+			}
+			System.out.println("Want to exit [Y/N]");
+			String choice = sc.nextLine();
+			if (choice.equalsIgnoreCase("Y")) {
+				System.out.println("thanks for using program ...");
+				break;
+			}
+		}
+	}
+}

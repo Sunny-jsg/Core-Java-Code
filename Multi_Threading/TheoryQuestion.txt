@@ -1,0 +1,295 @@
+✅ 1) What is Multithreading?
+📘 Definition
+
+Multithreading is the ability of a program to execute multiple threads simultaneously to perform multiple tasks at the same time.
+
+🧠 Simple words
+
+One program → many small workers (threads) → work together.
+
+🌍 Real-time Example
+
+📱 WhatsApp
+
+One thread → sending message
+
+One thread → receiving message
+
+One thread → notifications
+All work at the same time.
+
+🎯 Interview line
+
+Multithreading allows concurrent execution of multiple parts of a program to improve performance.
+
+✅ 2) Why do we need Multithreading?
+📘 Reasons
+
+Better CPU utilization
+
+Faster execution
+
+Responsive applications
+
+Handle multiple tasks at once
+
+🌍 Real-time Example
+
+🖥 Browser
+
+One tab loading
+
+Another tab scrolling
+
+Music playing
+Without multithreading → browser freezes.
+
+🎯 Interview line
+
+Multithreading improves application performance and responsiveness.
+
+✅ 3) What is Thread Scheduler?
+📘 Definition
+
+Thread Scheduler is a JVM component that decides which thread runs next.
+
+🧠 Important
+
+Scheduling is not predictable
+
+Depends on JVM + OS
+
+🌍 Real-time Example
+
+🎟 Airport security
+
+Many passengers (threads)
+
+Officer (scheduler) decides who goes next
+
+🎯 Interview line
+
+Thread Scheduler controls execution order of threads.
+
+✅ 4) What is Thread Priority?
+📘 Definition
+
+Thread priority tells the scheduler which thread is more important.
+
+🔢 Range
+
+MIN_PRIORITY = 1
+
+NORM_PRIORITY = 5 (default)
+
+MAX_PRIORITY = 10
+
+🌍 Real-time Example
+
+🚑 Ambulance vs bike
+
+Ambulance has higher priority
+
+⚠️ Important
+
+Priority is a hint, not a guarantee.
+
+🎯 Interview line
+
+Thread priority influences scheduling but does not guarantee execution order.
+
+✅ 5) What is Thread Life Cycle?
+📘 States
+
+New
+
+Runnable
+
+Running
+
+Waiting / Blocked
+
+Terminated
+
+🌍 Real-time Example
+
+🎓 Student life
+
+Admission → studying → exam → result
+
+🎯 Interview line
+
+Thread lifecycle defines different states of a thread from creation to termination.
+
+✅ 6) How to create Thread?
+📘 Two ways
+
+Extend Thread class
+
+Implement Runnable interface (recommended)
+
+🌍 Real-time Example
+
+👷 Hiring workers
+
+Extending Thread → worker with fixed job
+
+Runnable → worker can do different jobs
+
+🎯 Interview line
+
+Threads can be created by extending Thread or implementing Runnable.
+
+✅ 7) Difference between start() and run()
+start()	run()
+Creates new thread	No new thread
+Calls run internally	Normal method
+Parallel execution	Sequential
+🌍 Real-time Example
+
+☎️ Dialing number (start) vs talking (run)
+
+🎯 Interview line
+
+start() creates a new thread, run() executes like a normal method.
+
+✅ 8) Thread vs Runnable
+Thread	Runnable
+Class	Interface
+No multiple inheritance	Supports multiple inheritance
+Heavy	Lightweight
+🌍 Real-time Example
+
+👨‍🍳 Thread = chef
+📄 Runnable = recipe
+
+🎯 Interview line
+
+Runnable is preferred because it supports multiple inheritance and better design.
+
+✅ 9) Runnable vs Callable
+Runnable	Callable
+No return value	Returns value
+Cannot throw checked exception	Can throw
+run()	call()
+🌍 Real-time Example
+
+🧾 Runnable → worker reports verbally
+📊 Callable → worker submits written report
+
+🎯 Interview line
+
+Callable is used when we need return value from thread.
+
+✅ 10) What is Synchronization?
+📘 Definition
+
+Synchronization ensures only one thread accesses critical section at a time.
+
+🌍 Real-time Example
+
+🚽 One restroom, many people → lock system
+
+🎯 Interview line
+
+Synchronization prevents race condition and ensures data consistency.
+
+✅ 11) Synchronized Method vs Synchronized Block
+Method	Block
+Locks entire method	Locks specific code
+Slower	Faster
+Less control	More control
+🌍 Real-time Example
+
+🔒 Lock entire house vs lock only locker
+
+🎯 Interview line
+
+Synchronized block is preferred for performance.
+
+✅ 12) What is Deadlock?
+📘 Definition
+
+Deadlock occurs when two threads wait for each other forever.
+
+🌍 Real-time Example
+
+🧍 Person A holds pen, wants paper
+🧍 Person B holds paper, wants pen
+→ Deadlock
+
+🎯 Interview line
+
+Deadlock is a situation where threads wait indefinitely for each other’s resources.
+
+✅ 13) Java Program which gives Deadlock (Concept)
+Thread-1: lock A → wait for B
+Thread-2: lock B → wait for A
+
+🎯 Interview explanation
+
+Deadlock occurs due to circular wait and improper lock ordering.
+
+✅ 14) What is Inter-Thread Communication?
+📘 Definition
+
+Threads communicate using wait(), notify(), notifyAll().
+
+🌍 Real-time Example
+
+👨‍💼 Manager waits for report
+👨‍💻 Employee notifies after completion
+
+🎯 Interview line
+
+Inter-thread communication allows threads to coordinate execution.
+
+✅ 15) What is Producer–Consumer Problem?
+📘 Concept
+
+Producer produces data
+
+Consumer consumes data
+
+Shared buffer
+
+Uses wait() & notify()
+
+🌍 Real-time Example
+
+🍽 Restaurant
+
+Chef cooks
+
+Waiter serves
+
+If food not ready → waiter waits
+
+🎯 Interview line
+
+Producer–Consumer problem demonstrates thread coordination using wait and notify.
+
+✅ 16) What is Executor Framework?
+📘 Definition
+
+Executor Framework manages thread creation, reuse, and scheduling automatically.
+
+🌍 Real-time Example
+
+👔 Company HR
+
+You submit work
+
+HR assigns employee
+
+You don’t manage workers
+
+🎯 Interview line
+
+Executor Framework simplifies multithreading by managing thread pools efficiently.
+
+🏁 FINAL INTERVIEW TIP (IMPORTANT)
+
+If interviewer asks “Explain multithreading”, say:
+
+Multithreading allows a program to execute multiple tasks concurrently using threads, improving performance, responsiveness, and efficient resource utilization.

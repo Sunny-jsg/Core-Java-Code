@@ -1,0 +1,231 @@
+✅ 1) What is Generics and why we need Generics?
+📘 What is Generics?
+
+Generics allow us to define type-safe classes, interfaces, and methods by using parameterized types.
+
+List<String> list = new ArrayList<>();
+
+🧠 Why we need Generics?
+
+Avoid ClassCastException
+
+Provide compile-time type safety
+
+No need for type casting
+
+Improves code readability
+
+🌍 Real-time Example
+
+🧺 Basket for apples only
+Without generics → you may put stones
+With generics → only apples allowed
+
+🎯 Interview Line
+
+Generics provide type safety and eliminate runtime casting errors.
+
+✅ 2) What is Reflection API?
+📘 Definition
+
+Reflection API allows Java programs to inspect and manipulate classes, methods, variables at runtime.
+
+🌍 Real-time Example
+
+🩺 Doctor doing X-ray to see inside body
+Reflection lets us see inside class
+
+🎯 Interview Line
+
+Reflection API is used to examine or modify class behavior at runtime.
+
+✅ 3) What is the use of Class.forName()?
+📘 Purpose
+
+Loads a class into JVM dynamically
+
+Used to register JDBC drivers
+
+Class.forName("com.mysql.cj.jdbc.Driver");
+
+🌍 Real-time Example
+
+📦 Opening a box only when needed
+
+🎯 Interview Line
+
+Class.forName() loads a class dynamically at runtime.
+
+✅ 4) How many ways are available to create Object for a class?
+✔ 5 Ways
+
+1️⃣ new keyword
+2️⃣ Class.forName()
+3️⃣ clone()
+4️⃣ ObjectInputStream (deserialization)
+5️⃣ Reflection (Constructor.newInstance())
+
+🎯 Interview Line
+
+Objects can be created using new keyword, reflection, cloning, and deserialization.
+
+✅ 5) Java program to print methods available in a class
+import java.lang.reflect.Method;
+
+class Test {
+    public static void main(String[] args) {
+        Class<?> c = String.class;
+        Method[] methods = c.getDeclaredMethods();
+
+        for (Method m : methods) {
+            System.out.println(m.getName());
+        }
+    }
+}
+
+🌍 Example
+
+📋 Listing all facilities in a hotel
+
+✅ 6) Java program to print variables available in a class
+import java.lang.reflect.Field;
+
+class Test {
+    public static void main(String[] args) {
+        Class<?> c = Student.class;
+        Field[] fields = c.getDeclaredFields();
+
+        for (Field f : fields) {
+            System.out.println(f.getName());
+        }
+    }
+}
+
+✅ 7) How to set values to private variables outside the class?
+✔ Using Reflection
+Field f = c.getDeclaredField("name");
+f.setAccessible(true);
+f.set(obj, "Sunny");
+
+🌍 Real-time Example
+
+🔑 Master key opening locked door
+
+🎯 Interview Line
+
+Private variables can be accessed using reflection by disabling access checks.
+
+✅ 8) What is Garbage Collection?
+📘 Definition
+
+Garbage Collection automatically removes unused objects from memory.
+
+🌍 Real-time Example
+
+🧹 Cleaning unused items from room
+
+🎯 Interview Line
+
+Garbage Collection frees unused memory automatically.
+
+✅ 9) How Garbage Collection works in Java?
+🧠 Steps
+
+1️⃣ JVM finds unreachable objects
+2️⃣ Marks them
+3️⃣ Deletes them
+4️⃣ Frees memory
+
+🌍 Example
+
+🗑 Removing files not referenced by anyone
+
+✅ 10) Which algorithm is used by Garbage Collector?
+✔ Algorithms
+
+Mark & Sweep
+
+Mark & Compact
+
+Copying Algorithm
+
+Generational GC
+
+🎯 Interview Line
+
+Java GC uses Mark-and-Sweep and Generational algorithms.
+
+✅ 11) How many types of Garbage Collectors are available in Java?
+✔ Major Types
+
+1️⃣ Serial GC
+2️⃣ Parallel GC
+3️⃣ CMS GC
+4️⃣ G1 GC
+5️⃣ ZGC (Java 11+)
+
+🌍 Example
+
+🧹 Different cleaning teams for small & large buildings
+
+✅ 12) What is Inner Class?
+📘 Definition
+
+An inner class is a class defined inside another class.
+
+class Outer {
+    class Inner { }
+}
+
+🌍 Real-time Example
+
+🏠 Room inside house
+
+✅ 13) Why we need Inner Classes?
+🧠 Reasons
+
+Access private members
+
+Logical grouping
+
+Better encapsulation
+
+Cleaner code
+
+🎯 Interview Line
+
+Inner classes increase encapsulation and improve code readability.
+
+✅ 14) How many types of Inner Classes are available in Java?
+✔ 4 Types
+
+1️⃣ Non-static inner class
+2️⃣ Static nested class
+3️⃣ Local inner class
+4️⃣ Anonymous inner class
+
+✅ 15) What is Anonymous Implementation?
+📘 Definition
+
+Anonymous implementation is implementing interface or extending class without creating a named class.
+
+Runnable r = new Runnable() {
+    public void run() {
+        System.out.println("Running");
+    }
+};
+
+🌍 Real-time Example
+
+🧑 Temporary worker for one task
+
+🎯 Interview Line
+
+Anonymous classes are used for one-time implementations.
+
+🏁 FINAL INTERVIEW MEMORY TRICK
+Generics → type safety
+Reflection → runtime access
+GC → auto memory cleanup
+Inner class → class inside class
+Anonymous → no class name

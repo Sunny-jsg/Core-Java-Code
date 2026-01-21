@@ -1,0 +1,287 @@
+✅ 1) What is File Handling?
+📘 Definition
+
+File Handling is the process of creating, reading, writing, and deleting files in Java to store data permanently.
+
+🧠 Why needed?
+
+Data should not be lost when program stops
+
+Database is not always required
+
+Logs, reports, configurations need files
+
+🌍 Real-Time Example
+
+📄 Marks card / Resume
+
+Written once
+
+Read many times
+
+Stored permanently
+
+🎯 Interview Line
+
+File handling allows Java programs to store and retrieve data from files permanently.
+
+✅ 2) What is File class?
+📘 Definition
+
+File class represents a file or directory path in Java.
+
+⚠️ Important:
+
+It does NOT read or write data
+
+It only gives information about file
+
+🌍 Real-Time Example
+
+📍 Google Maps location
+You know where the house is, not what’s inside.
+
+🎯 Interview Line
+
+File class is used to represent file or directory paths and to get file-related information.
+
+✅ 3) Methods available in File class
+Method	Purpose
+createNewFile()	Creates new file
+exists()	Checks file exists
+delete()	Deletes file
+mkdir()	Creates directory
+length()	File size
+getName()	File name
+getPath()	Path
+isFile()	Is file?
+isDirectory()	Is directory?
+🌍 Example
+
+🗂 Checking if folder exists before saving file
+
+✅ 4) What is FileReader and FileWriter?
+FileReader
+
+Reads character data
+
+Used for text files
+
+FileWriter
+
+Writes character data
+
+Overwrites by default
+
+🌍 Real-Time Example
+
+📖 Reading book (FileReader)
+✍️ Writing notes (FileWriter)
+
+🎯 Interview Line
+
+FileReader reads character data from files and FileWriter writes character data into files.
+
+✅ 5) How to read data from a File?
+Ways:
+
+FileReader
+
+BufferedReader
+
+Scanner
+
+🌍 Real-Time Example
+
+📖 Reading a letter line by line
+
+Interview Tip
+
+BufferedReader is preferred for performance.
+
+✅ 6) How to write data into File?
+Ways:
+
+FileWriter
+
+BufferedWriter
+
+PrintWriter
+
+🌍 Real-Time Example
+
+✍️ Writing diary
+
+Important
+
+Use flush() or close()
+
+Otherwise data may not be saved
+
+✅ 7) BufferedReader vs FileReader
+FileReader	BufferedReader
+Reads character by character	Reads line by line
+Slow	Fast
+No buffering	Uses buffer
+Low performance	High performance
+🌍 Real-Time Example
+
+🚶 Walking one step vs 🚗 traveling in car
+
+🎯 Interview Line
+
+BufferedReader is faster than FileReader because it reads data in chunks.
+
+✅ 8) Copy data from one file to another
+🌍 Real-Time Example
+
+📄 Photocopy document
+
+Logic
+
+Read from source file
+
+Write into destination file
+
+🎯 Interview Line
+
+File copy is done by reading data from one file and writing it into another file using streams.
+
+✅ 9) Read data from two files and write into another file
+🌍 Real-Time Example
+
+📑 Merge two reports into one final report
+
+Logic
+
+Read File-1
+
+Read File-2
+
+Write both into File-3
+
+✅ 10) Count number of words in a file
+🌍 Real-Time Example
+
+📝 Checking word count in assignment
+
+Logic
+
+Read line
+
+Split by space
+
+Count words
+
+🎯 Interview Line
+
+Word count is done by reading file line by line and splitting using space delimiter.
+
+✅ 11) What is Scanner class?
+📘 Definition
+
+Scanner is used to read input from:
+
+Keyboard
+
+File
+
+String
+
+🌍 Real-Time Example
+
+📝 Online form input
+
+Difference from BufferedReader
+
+Scanner is easy
+
+BufferedReader is faster
+
+🎯 Interview Line
+
+Scanner is used to read formatted input from different sources.
+
+✅ 12) What is Serializable interface?
+📘 Definition
+
+Serializable is a marker interface used to indicate that an object can be converted into byte stream.
+
+🌍 Real-Time Example
+
+📦 Packing object into box for transport
+
+🎯 Interview Line
+
+Serializable allows Java objects to be converted into a stream for storage or transfer.
+
+✅ 13) What is Serialization?
+📘 Definition
+
+Serialization is the process of converting an object into byte stream.
+
+🌍 Real-Time Example
+
+💾 Saving game progress
+
+Why?
+
+Store object in file
+
+Send object over network
+
+🎯 Interview Line
+
+Serialization converts object state into byte stream for persistence.
+
+✅ 14) What is De-Serialization?
+📘 Definition
+
+De-serialization is the process of converting byte stream back into object.
+
+🌍 Real-Time Example
+
+🎮 Loading saved game
+
+🎯 Interview Line
+
+De-serialization reconstructs object from byte stream.
+
+✅ 15) What is serialVersionUID?
+📘 Definition
+
+serialVersionUID is a unique identifier for Serializable class.
+
+Why needed?
+
+Ensures class compatibility during deserialization
+
+Prevents InvalidClassException
+
+🌍 Real-Time Example
+
+📦 Parcel version number
+
+🎯 Interview Line
+
+serialVersionUID ensures compatibility between serialized object and class.
+
+✅ 16) What is transient keyword?
+📘 Definition
+
+transient prevents a variable from being serialized.
+
+🌍 Real-Time Example
+
+🔐 Password should not be saved
+
+🎯 Interview Line
+
+transient keyword is used to exclude sensitive data from serialization.
+
+🏁 FINAL INTERVIEW MEMORY TRICK
+File → path
+Reader/Writer → data
+Buffered → fast
+Serializable → object to file
+transient → hide data

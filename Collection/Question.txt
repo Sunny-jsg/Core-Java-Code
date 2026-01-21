@@ -1,0 +1,7 @@
+List → order + duplicates
+Set → unique
+Map → key-value
+ArrayList → fast search
+LinkedList → fast insert
+HashMap → fast access
+TreeSet → sorted

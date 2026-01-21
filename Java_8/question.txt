@@ -1,0 +1,192 @@
+1) What are the new features added in Java 8?
+
+Java 8 introduced major functional programming features.
+Key additions are Lambda Expressions, Functional Interfaces, Stream API, Default & Static methods in interfaces, Optional class, and new Date-Time API.
+These features make code more concise and support parallel processing.
+
+Example: Processing employee salary list using Stream instead of loops.
+
+2) What is a Default method and why we need it?
+
+A default method is a method with body inside an interface.
+It allows adding new methods to interfaces without breaking existing implementing classes.
+
+Example:
+If an interface Vehicle adds default void start(), old classes don’t need to implement it again.
+
+3) What is a static method in interface and why we need it?
+
+A static method in an interface has a body and belongs to the interface itself.
+It is used for utility/helper methods related to the interface.
+
+Example:
+InterfaceName.utilityMethod() used without creating objects.
+
+4) Default methods vs Static methods in interfaces
+Default Method	Static Method
+Called using object	Called using interface name
+Can be overridden	Cannot be overridden
+Supports backward compatibility	Used for helper utilities
+5) What is a Functional Interface?
+
+A functional interface has only one abstract method.
+It is used as a target for lambda expressions.
+
+Example:
+Runnable, Callable, or Comparator.
+
+6) What is a Lambda expression?
+
+A lambda expression is a short form of anonymous function.
+It allows passing behavior as an argument.
+
+Example:
+(a,b) -> a + b
+
+7) How to write Lambda expression?
+
+Basic syntax:
+
+(parameters) -> { body }
+
+
+Example:
+name -> System.out.println(name);
+
+8) How to invoke Lambda expressions?
+
+Lambda is assigned to a functional interface and then called.
+
+Example:
+
+Runnable r = () -> System.out.println("Hello");
+r.run();
+
+9) Predefined Functional Interfaces in Java 8
+
+Common ones from java.util.function:
+
+Predicate<T>
+
+Function<T,R>
+
+Consumer<T>
+
+Supplier<T>
+
+10) What is Predicate?
+
+Predicate takes an input and returns true or false.
+Used mainly for filtering.
+
+Example:
+Predicate<Employee> p = e -> e.salary > 100000;
+
+11) What is Supplier?
+
+Supplier returns a value but takes no input.
+
+Example:
+Supplier<String> s = () -> "Welcome User";
+
+12) What is Consumer?
+
+Consumer accepts input but returns nothing.
+Used for performing actions.
+
+Example:
+Consumer<String> c = msg -> System.out.println(msg);
+
+13) What is Function?
+
+Function takes one input and returns a result.
+
+Example:
+Function<Employee, String> f = e -> e.getName();
+
+14) What is Optional class and why we need it?
+
+Optional is a container object used to avoid NullPointerException.
+It forces checking value before use.
+
+Example:
+Optional<Employee> emp = Optional.ofNullable(findEmp());
+
+15) What is Stream API?
+
+Stream API is used to process collections in functional style.
+It supports filtering, mapping, sorting, and parallel processing.
+
+Example:
+Filtering high-salary employees.
+
+16) How to create Stream object in Java?
+List<Employee> list = ...
+Stream<Employee> s = list.stream();
+
+
+Or directly:
+Stream.of(1,2,3,4);
+
+17) How to filter data using Stream API?
+list.stream()
+    .filter(e -> e.salary > 100000)
+    .collect(Collectors.toList());
+
+18) What is map() operation in Java 8?
+
+map() transforms one object into another.
+
+Example:
+Convert employee list to name list:
+
+list.stream()
+    .map(e -> e.getName())
+
+19) What is flatMap() in Java 8?
+
+flatMap() is used to flatten nested collections.
+
+Example:
+List of departments → list of all employees.
+
+20) Difference between intermediate and terminal operations
+Intermediate	Terminal
+Returns Stream	Returns result
+Lazy execution	Executes pipeline
+Example: filter(), map()	collect(), forEach()
+21) Program: Employees with salary > 1 lakh
+list.stream()
+    .filter(e -> e.getSalary() > 100000)
+    .map(e -> e.getName())
+    .forEach(System.out::println);
+
+22) Date changes in Java 8
+
+Java 8 introduced new Date-Time API in java.time package.
+It is immutable, thread-safe, and easy to use.
+
+Example:
+LocalDate.now()
+
+23) What is forEach() method in Java?
+
+forEach() is a terminal operation used to iterate elements.
+
+Example:
+list.forEach(System.out::println);
+
+24) New changes in Collection Framework in Java 8
+
+forEach() added
+
+removeIf() added
+
+stream() and parallelStream() added
+
+default methods in Collection interfaces
+
+25) What is Spliterator?
+
+Spliterator is used to split collections for parallel processing.
+It helps Stream API to process data faster.
